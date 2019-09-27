@@ -1,31 +1,14 @@
 import * as express from 'express';
-import Todo from './models/Todo';
-import * as mongoose from 'mongoose';
-import { json } from 'body-parser';
+import * as bodyParser from 'body-parser';
+import routes from './routes';
 
 const app = express();
-app.use(json());
 
-if (mongoose.connection.readyState === 0) {
-  mongoose
-    .connect('mongodb://localhost:32768/test')
-    .then(() => console.log('Db connected...'))
-    .catch(e => console.log('Db connection error', e));
-}
-app.get('/api/todo', async (req, res) => {
-  try {
-    const todos = await Todo.find({});
-    res.status(200).json({ error: null, data: todos });
-  } catch (e) {
-    res.status(500).json({ error: e.message, data: null });
-  }
-});
-app.post('/api/todo', async (req, res) => {
-  try {
-    const todo = await new Todo({ todo: req.body.todo }).save();
-    res.status(200).json({ error: null, data: todo });
-  } catch (e) {
-    res.status(500).json({ error: e.message, todo: null });
-  }
-});
+app.use(bodyParser.json());
+//support application/x-www-form-urlencoded post data
+app.use(bodyParser.urlencoded({ extended: false }));
+
+//Set all routes from routes folder
+app.use('/', routes);
+
 export default app;
