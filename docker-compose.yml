@@ -1,0 +1,34 @@
+version: '3.1' # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  web: # web client application
+    build: web # specify the directory of the Dockerfile
+    ports:
+      - "4200:4200" # specify port forewarding   
+      
+  admin: # admin ui application
+    build: admin # specify the directory of the Dockerfile
+    ports:
+      - "4300:4300" # specify port forewarding    
+
+  server: # backend RESTful APIs
+    build: server # specify the directory of the Dockerfile
+    ports:
+      - "3000:3000" #specify ports forewarding
+    links:
+      - mongodb # link this service to the database service
+
+#  mongodata:  
+#    image: mongo
+#    volumes:
+#      - /data/db
+#    command: --break-mongo
+  mongodb:  
+    image: mongo # specify image to build container from
+    volumes_from:
+     - mongodata
+    ports:
+      - "27017:27017" # specify port forewarding
+#    command: --smallfiles --rest --auth    
+    
