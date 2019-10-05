@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
 import { Post } from '../models';
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 
 const addNewPost = (req: Request, res: Response) => {
   let newPost = new Post(req.body);
@@ -46,7 +46,7 @@ const updatePost = (req: Request, res: Response) => {
 };
 
 const deletePost = (req: Request, res: Response) => {
-  Post.remove({ _id: req.params.contactId }, err => {
+  Post.remove({ _id: req.params.postId }, err => {
     if (err) {
       res.send(err);
     }

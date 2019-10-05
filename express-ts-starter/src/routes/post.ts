@@ -19,9 +19,7 @@ postRoutes
 // Post detail
 postRoutes
   .route('/:postId')
-  // get specific contact
   .get(getPostById)
-
   .put(updatePost)
   .delete(deletePost);
 
