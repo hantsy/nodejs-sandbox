@@ -33,7 +33,7 @@ module.exports = {
     minimize: true //Update this to true or false
   },
   plugins: [
-    // new webpack.optimize.UglifyJsPlugin(),
+    // new webpack.optimize.UglifyJsPlugin(), removed, and replaced by `config.optimization.minimize`
     new webpack.ContextReplacementPlugin()
   ]
 };

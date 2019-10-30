@@ -12,3 +12,5 @@
 * [TypeScript Rest API with Express.js, JWT, Authorization Roles and TypeORM](https://medium.com/javascript-in-plain-english/creating-a-rest-api-with-jwt-authentication-and-role-based-authorization-using-typescript-fbfa3cab22a4)
 * [Typescript Essentials](https://medium.com/@wittydeveloper/typescript-essentials-b7ae85b0f561)  , A blog series of introducing Typescript
 
+* [Build a Desktop Application with Electron and Angular](https://www.sitepoint.com/build-a-desktop-application-with-electron-and-angular/)
+
