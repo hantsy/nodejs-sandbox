@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not go negative 1`] = `
+<span>
+  Value: 
+  0
+  <button
+    className="decrement"
+    onClick={[Function]}
+  >
+    −
+  </button>
+  <button
+    className="increment"
+    onClick={[Function]}
+  >
+    +
+  </button>
+</span>
+`;
+
+exports[`should render 0 1`] = `
+<span>
+  Value: 
+  0
+  <button
+    className="decrement"
+    onClick={[Function]}
+  >
+    −
+  </button>
+  <button
+    className="increment"
+    onClick={[Function]}
+  >
+    +
+  </button>
+</span>
+`;
+
+exports[`should render 2 1`] = `
+<span>
+  Value: 
+  2
+  <button
+    className="decrement"
+    onClick={[Function]}
+  >
+    −
+  </button>
+  <button
+    className="increment"
+    onClick={[Function]}
+  >
+    +
+  </button>
+</span>
+`;

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <span>
+      Value: 
+      0
+      <button
+        className="decrement"
+        onClick={[Function]}
+      >
+        −
+      </button>
+      <button
+        className="increment"
+        onClick={[Function]}
+      >
+        +
+      </button>
+    </span>
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
+    <p>
+      Edit 
+      <code>
+        src/App.js
+      </code>
+       and save to reload.
+    </p>
+    <a
+      className="App-link"
+      href="https://reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Learn React 1
+    </a>
+  </header>
+</div>
+`;
