@@ -1,0 +1,10 @@
+repo_name: hantsy/nodejs-sandbox
+report_id: e9e2c6ed6cb52e9f6c55d938ba9fdd0b
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-31T08:19:08+00:00'
+requested_by: hantsy
+provider: github
+branch: master
+detected_tools_count: 0
+tools: []
